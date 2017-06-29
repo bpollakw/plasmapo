@@ -12,7 +12,7 @@
 			<div style="clear: both;"></div>
 			<label><b>Input instructions</b></label>
 			<p>Two columns are required for features: type and name. Currently, promoter (p), cds (c), fusion (f) or terminator (t) features are supported. Features can be repeated any number of times Features are drawn by input order.</p>
-			<p>Colour can be specified for cds features in a 3rd column. 1 - 9 numbers map to different colours. </p>
+			<p>Colour can be only specified for cds (c) features in a 3rd column. 1 - 9 numbers map to different colours.</p>
 			<p>To retrieve vector graphics, just print to PDF through your browser after the plasmid map is rendered.</p>
 			<div style="clear: both;"></div>
 			<form id="form" action="" class="center-form" method="POST">
@@ -33,7 +33,7 @@ t 35ST
 p MpEF1a
 c eGFP 3
 f Lti6b 5
-t 35ST
+t nosT
 p MpTPL
 c Venus 4
 f N7 5
@@ -43,7 +43,7 @@ t 35ST</textarea>
 		<p>MIT license - Bernardo Pollak - bpollak[at]gmail[dot]com.</p>
 		<script>
 		$("#instructions").focus(function() {
-			if( $(this).val() == "p MpEF1a \nc HygR 1\nt nosT\np MpTUBa-like\nc mTurquoise2 2\nf N7 5\nt 35ST\np MpEF1a\nc eGFP 3\nf Lti6b 5\nt 35ST\np MpTPL\nc Venus 4\nf N7 5\nt 35ST" ) {
+			if( $(this).val() == "p MpEF1a \nc HygR 1\nt nosT\np MpTUBa-like\nc mTurquoise2 2\nf N7 5\nt 35ST\np MpEF1a\nc eGFP 3\nf Lti6b 5\nt nosT\np MpTPL\nc Venus 4\nf N7 5\nt 35ST" ) {
         $(this).val("");
     }});
 		</script>

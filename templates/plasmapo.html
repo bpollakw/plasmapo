@@ -57,7 +57,7 @@
 				'1'		: 'rgb(64,216,216)',
 				'2'		: 'rgb(96,216,96)',
 				'3'		: 'rgb(224, 224, 64)',
-				'4'		: 'rgb(96, 96, 96)',
+				'4'		: 'rgb(196, 196, 196)',
 				'5'		: 'rgb(192,64,64)',
 				'6'		: 'rgb(64, 124, 200)',
 				'7'		: 'rgb(128, 216, 0)',
@@ -115,13 +115,22 @@
 					pos = pos + 40
 					}
 				if (commands[i].type == "c"){
-					html = html + "<trackmarker start="+(pos)+" end="+(pos+95)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:"+colour+"' class='marker markermedium' arrowendlength='5'>\
-					<markerlabel text="+name+" vadjust='30' hadjust='0' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel>"
+					if (name.length > 4){
+						html = html + "<trackmarker start="+(pos)+" end="+(pos+95)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:"+colour+"' class='marker markermedium' arrowendlength='5'>\
+						<markerlabel text="+name+" vadjust='30' hadjust='0' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel>"
+					}else{
+						html = html + "<trackmarker start="+(pos)+" end="+(pos+95)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:"+colour+"' class='marker markermedium' arrowendlength='5'>\
+						<markerlabel type='path' text="+name+" vadjust='16' hadjust='-1' valign='inner' class='lglabel'></markerlabel>"
+					}
 					pos = pos + 98
 				}
 				if (commands[i].type == "f"){
-					html = html + "<trackmarker start="+(pos-31)+" end="+(pos+70)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:#555' class='marker markermedium' arrowendlength='5' arrowstartlength='-5'>\
-					<markerlabel type='path' text="+name+" vadjust='16' hadjust='1' valign='inner' class='lglabel white'></markerlabel>"
+					if (name.length > 4){
+						html = html + "<trackmarker start="+(pos-28)+" end="+(pos+70)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:#000' class='marker markermedium' arrowendlength='5' arrowstartlength='-5'>\
+						<markerlabel type='path' text="+name+" vadjust='30' hadjust='0' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline''></markerlabel>"
+					}else{
+						html = html + "<trackmarker start="+(pos-28)+" end="+(pos+70)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:#000' class='marker markermedium' arrowendlength='5' arrowstartlength='-5'>\
+						<markerlabel type='path' text="+name+" vadjust='16' hadjust='1' valign='inner' class='lglabel white'></markerlabel>"}
 					pos = pos + 70
 				}
 				if (commands[i].type == "t"){
