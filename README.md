@@ -15,5 +15,13 @@ The maximum ammount of plasmid features that can be drawn is about 30 (10 transc
 Colour schemes are set but can be changes in the javascript.
 The code is horribly put together, since I'm in the process of thesis write up, I cannot spare the time to make this better. Nevertheless, with a bit of JS and HTML you can probably fix the mess (and hopefully pull request!).
 
+Clone the repo and then just do:
+
+```
+python server.py
+
+```
+And if you meet the requirements you should be alright. Go to localhost:8080 in your browser and start playing.
+
 MIT license for attribution.
 Bernardo Pollak
