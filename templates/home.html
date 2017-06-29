@@ -16,6 +16,13 @@
 			<p>To retrieve vector graphics, just print to PDF through your browser after the plasmid map is rendered.</p>
 			<div style="clear: both;"></div>
 			<form id="form" action="" class="center-form" method="POST">
+				<label class="label" for="name">Plasmid name</label>
+				<input id="name" class="text-input" type="text"  name="name" onfocus="if (this.value == 'e.g. pUC') { this.value = ''; }" value="e.g. pUC">
+				<div style="clear: both;"></div>
+				<label class="label" for="resistance">Resistance</label>
+				<input id="resistance" class="text-input" type="text"  name="resistance" onfocus="if (this.value == 'e.g. KanR') { this.value = ''; }" value="e.g. KanR">
+				<div style="clear: both;"></div>
+	
 				<textarea id="instructions" class="box seq" name="instructions" type="text">p MpEF1a 
 c HygR 1
 t nosT

@@ -23,8 +23,12 @@ def internal_error(e):
 def index():
 	if request.method == 'POST':
 		instructions = request.form["instructions"]
+		name = request.form["name"]
+		resistance = request.form["resistance"]
 		if instructions != "":
 			session['instructions'] = instructions
+			session['name'] = name
+			session['resistance'] = resistance
 			return redirect(url_for('plasmapo'))
 		
 	return render_template('home.html')
@@ -33,10 +37,12 @@ def index():
 def plasmapo():
 	commands = []
 	instructions = session.get('instructions')
+	name = session.get('name')
+	resistance = session.get('resistance')
 	lines = instructions.splitlines()
 	for line in lines:
 		commands.append(line)
-	return render_template('plasmapo.html', instructions = commands)
+	return render_template('plasmapo.html', instructions = commands, name = name, resistance = resistance)
 
 if __name__ == '__main__':
 	socketio.run(app, debug=True,host='0.0.0.0', port = 8080)

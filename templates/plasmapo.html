@@ -42,7 +42,7 @@
 
 		<plasmid sequencelength='2000' plasmidheight='390' plasmidwidth='390'>
 			<plasmidtrack width='5' trackstyle='fill:#ccc;stroke:#999' radius='125'>
-				<tracklabel labelstyle='font-size:18px;font-weight:500;fill:#666;' text='L2-1 TUBaTPL'>
+				<tracklabel labelstyle='font-size:18px;font-weight:500;fill:#666;' text="{{name}}">
 				</tracklabel>
 				
 				<div class="plasmid">
@@ -56,7 +56,7 @@
 				'0'		: 'rgb(255, 255, 255)',
 				'1'		: 'rgb(64,216,216)',
 				'2'		: 'rgb(96,216,96)',
-				'3'		: 'rgb(216, 216, 96)',
+				'3'		: 'rgb(224, 224, 64)',
 				'4'		: 'rgb(96, 96, 96)',
 				'5'		: 'rgb(192,64,64)',
 				'6'		: 'rgb(64, 124, 200)',
@@ -130,10 +130,11 @@
 					pos = pos + 38
 				}
 			}
+			// "Standard" specified features for vectors (bottom)
 			html = html + "<trackmarker start="+(1110)+" end="+(1130)+" wadjust='12' vadjust='-6' markerstyle='stroke:#000;fill:rgb(156, 156, 156);'><markerlabel text='LB' vadjust='20' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel></trackmarker>"
 			html = html + "<trackmarker start="+(1070)+" end="+(1100)+" wadjust='12' vadjust='-6' markerstyle='stroke:#000;fill:#ff0;' arrowstartangle='0.5' arrowendangle='0.5' arrowstartlength='2' arrowendlength='2'><markerlabel text='pSa' vadjust='30' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel></trackmarker>"
 			html = html + "<trackmarker start="+(945)+" end="+(1055)+" wadjust='14' vadjust='-7' markerstyle='stroke:#000;fill:rgb(96, 96, 96)' class='marker markermedium' arrowstartlength='5'>\
-			<markerlabel text='nptI' vadjust='30' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel>"
+			<markerlabel text='{{resistance}}' vadjust='30' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel>"
 			html = html + "<trackmarker start="+(900)+" end="+(930)+" wadjust='12' vadjust='-6' markerstyle='stroke:#000;fill:rgb(192,64,64);' arrowstartangle='0.5' arrowendangle='0.5' arrowstartlength='2' arrowendlength='2'><markerlabel text='pMB1' vadjust='30' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel></trackmarker>"
 			html = html + "<trackmarker start="+(870)+" end="+(890)+" wadjust='12' vadjust='-6' markerstyle='stroke:#000;fill:rgb(156, 156, 156);'><markerlabel text='RB' vadjust='20' hadjust='2' valign='outer' class='lglabel' showline='1' linevadjust='-10' lineclass='labelline'></markerlabel></trackmarker>"
 		
