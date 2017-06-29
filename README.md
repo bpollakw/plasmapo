@@ -11,7 +11,7 @@ First, its extremely alpha stage and has several constraints. However, it will b
 
 ### Constraints
 The plasmid size is set for avoiding trouble with adaptive graphics. AngularPlasmid does not incorporate SBOL visual standards, thus they had to be "drawn" in a very primitive way.
-The maximum ammount of plasmid features that can be drawn is about 30 (10 transcriptional units), but this may be enough for most current uses in plasmid construction.
+The maximum ammount of plasmid features that can be drawn is about 27 (9 transcriptional units), but this may be enough for most current uses in plasmid construction.
 Colour schemes are set, but can be changed in the JS.
 The code is horribly put together since I'm in the process of thesis write up. Nevertheless, with a bit of JS and HTML you can probably fix the mess (and hopefully pull request!).
 
