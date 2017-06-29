@@ -3,7 +3,7 @@ Pseudocode plasmid map generator using SBOL visual standards
 
 ## Intro
 
-This app was generated using the awesome AngularPlasmid (http://angularplasmid.vixis.com) library, and a lot of reused code from Mihails Delmans in LoopDB (https://github.com/HaseloffLab/LoopDB). 
+This app was generated using the awesome AngularPlasmid (http://angularplasmid.vixis.com) library from Rehan Chawdry, and a lot of reused code from Mihails Delmans in LoopDB (https://github.com/HaseloffLab/LoopDB). 
 
 The purpose of its development was for simplifying the making of vector graphics plasmid maps for my PhD thesis, and maintaining feature size and illustration consistency in circular plasmids.
 
