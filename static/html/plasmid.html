@@ -1,0 +1,64 @@
+<style>
+	@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Donegal+One|Source+Code+Pro:400");
+	body {font-family: 'Lato';font-weight:400;}
+	.lglabel {font-size:14px}
+	.mdlabel {font-size:10px}
+	.smlabel {font-size:8px}
+	.labelline {stroke:#333;stroke-dasharray:2,2;stroke-width:2px;}
+	.white {fill:#fff}
+	.black {fill:#000}
+	.red {fill:#c00}
+	.blue {fill:#00c}
+	.green {fill:#0c0}
+	.gold {fill:#990}
+	.gray {fill:#666}
+	.marker {fill:none;stroke:#000}
+	.markerbold {stroke-width:1px}
+	.markermedium {stroke-width:1px}
+</style>
+
+ <svg width="0" height="0">
+	<defs>
+		<filter id="dropshadow" height="120%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> 
+			<feOffset dx="2" dy="2" result="offsetblur"/> 
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="0.3"/>
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> 
+				<feMergeNode in="SourceGraphic"/> 
+			</feMerge>
+		</filter>
+	</defs>	
+</svg>       
+
+ <plasmid sequencelength="2000" plasmidheight="375" plasmidwidth="375">
+	<plasmidtrack width="5" trackstyle='fill:#ccc;stroke:#999;filter:url(#dropshadow)' radius='125'>
+		<tracklabel labelstyle="font-size:20px;font-weight:700;fill:#666;" text="pPMA43C"></tracklabel>
+		<tracklabel labelstyle="font-size:12px;font-weight:400;fill:#999;" text="1,000 bp" vadjust="18"></tracklabel>
+
+		<!--TESTING SVG DRAW -->
+
+		<!--Promoter -->
+		<!--Vertical "tick" -->
+
+		<trackmarker start="0" wadjust="20.5" vadjust="0" class="marker markermedium"></trackmarker>
+		<!--Horizontal "tick" - Negative adjust decreased the width of the feature respective to the width of the track -->
+		<trackmarker start="0" end="30" wadjust="-4" vadjust="25" class="marker markermedium" arrowstartwidth="0" arrowstartlength="0" arrowendwidth="0" arrowendlength="0">
+		<markerlabel type="path" text="Promoter" vadjust="10" valign="outer" labelclass="mdlabel gray"></markerlabel></trackmarker>
+		<!--Arrow -->
+		<trackmarker start="30" end="50" wadjust="7" vadjust="19" class="marker markermedium" arrowendlength="3"></trackmarker>
+
+		<!--CDS -->
+		<trackmarker start="50" end="160" wadjust="14" vadjust="-7" markerstyle='stroke:#000;fill:#999' class="marker markermedium" arrowendlength="5">
+		<markerlabel type="path" text="CDS" vadjust="16" valign="inner" labelclass="mdlabel white"></markerlabel></trackmarker>
+
+		<!--Terminator -->
+		<!--Vertical "tick" -->
+		<trackmarker start="180" wadjust="20" vadjust="0" class="marker markermedium" arrowstartwidth="1" arrowstartlength="1" arrowendwidth="1" arrowendlength="1"></trackmarker>
+		<!--Horizontal "tick -->
+		<trackmarker start="160" end="200" wadjust="-4" vadjust="25" class="marker markermedium"><markerlabel type="path" text="Terminator" vadjust="5" valign="outer" labelclass="mdlabel gray"></markerlabel></trackmarker>
+
+	</plasmidtrack>
+</plasmid>

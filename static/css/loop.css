@@ -1,0 +1,42 @@
+.fa-infinity:before{
+	content: "∞";
+}
+
+.box{
+	position: relative;
+	width: 25%;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: 1px solid #CCC; 
+	outline:0;
+	text-align: left;
+	vertical-align: super;
+	overflow-y: scroll;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #666;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+.seq{
+	min-height : 300px;
+}
+.button{
+	border: 1px solid #777;
+	border-radius: 9px;
+	background: -webkit-linear-gradient(top, #AAA, #CCC);
+	font-size: 12px;
+	font-weight: 600;
+	color: #333;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-left: 10px;
+	min-width: 60px;
+}
+.button:hover{
+	color : #b30000;
+	background: -webkit-linear-gradient(top, #EEE, #FFF);
+}

@@ -1,0 +1,111 @@
+<style>
+	@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Donegal+One|Source+Code+Pro:400");
+	body {font-family: 'Lato';font-weight:400;}
+	.lglabel {font-size:14px}
+	.mdlabel {font-size:10px}
+	.smlabel {font-size:8px}
+	.labelline {stroke:#333;stroke-dasharray:2,2;stroke-width:2px;}
+	.white {fill:#fff}
+	.black {fill:#000}
+	.red {fill:#c00}
+	.blue {fill:#00c}
+	.green {fill:#0c0}
+	.gold {fill:#990}
+	.gray {fill:#666}
+	.marker {fill:none;stroke:#000}
+	.markerbold {stroke-width:1px}
+	.markermedium {stroke-width:1px}
+</style>
+
+ <svg width="0" height="0">
+	<defs>
+		<filter id="dropshadow" height="120%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5"/> 
+			<feOffset dx="2" dy="2" result="offsetblur"/> 
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="0.3"/>
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> 
+				<feMergeNode in="SourceGraphic"/> 
+			</feMerge>
+		</filter>
+	</defs>	
+</svg>       
+
+ <plasmid sequencelength="1000" plasmidheight="375" plasmidwidth="375">
+	<plasmidtrack width="5" trackstyle='fill:#ccc;stroke:#999' radius='125'>
+		<tracklabel labelstyle="font-size:20px;font-weight:700;fill:#666;" text="pPMA43C"></tracklabel>
+		<tracklabel labelstyle="font-size:12px;font-weight:400;fill:#999;" text="1,000 bp" vadjust="18"></tracklabel>
+
+		<!--TESTING SVG DRAW -->
+
+		<!--Promoter -->
+		<!--Vertical "tick" -->
+		<trackmarker start="20" wadjust="20.5" vadjust="0" class="marker markermedium"></trackmarker>
+		<!--Horizontal "tick" - Negative adjust decreased the width of the feature respective to the width of the track -->
+		<trackmarker start="20" end="40" wadjust="-4" vadjust="25" class="marker markermedium" arrowstartwidth="0" arrowstartlength="0" arrowendwidth="0" arrowendlength="0">
+		<markerlabel type="path" text="Promoter" vadjust="10" valign="outer" labelclass="mdlabel gray"></markerlabel></trackmarker>
+		<!--Arrow -->
+		<trackmarker start="40" end="49" wadjust="7" vadjust="19" class="marker markermedium" arrowendlength="3"></trackmarker>
+
+		<!--CDS -->
+		<trackmarker start="45" end="120" wadjust="14" vadjust="-7" markerstyle='stroke:#000;fill:#999' class="marker markermedium" arrowendlength="5">
+		<markerlabel type="path" text="CDS" vadjust="16" valign="inner" labelclass="mdlabel white"></markerlabel></trackmarker>
+
+		<!--Terminator -->
+		<!--Vertical "tick" -->
+		<trackmarker start="125" wadjust="20" vadjust="0" class="marker markermedium" arrowstartwidth="1" arrowstartlength="1" arrowendwidth="1" arrowendlength="1"></trackmarker>
+		<!--Horizontal "tick -->
+		<trackmarker start="115" end="135" wadjust="-4" vadjust="25" class="marker markermedium"><markerlabel type="path" text="Terminator" vadjust="5" valign="outer" labelclass="mdlabel gray"></markerlabel></trackmarker>
+
+		
+		<!-- FILLERS -->
+		<!-- EcoRI -->
+		<trackmarker start="630" end="720" markerstyle='stroke:#000;fill:#f00;' arrowendlength="10" arrowendwidth="5" wadjust="10" vadjust="-5">
+			<markerlabel text="EcoRI" vadjust="40" hadjust="-2" valign="outer" class="lglabel red" showline="1" linevadjust="-20" lineclass="labelline"></markerlabel>
+			<markerlabel type="path" text="630-720" class="smlabel white" vadjust="4"></markerlabel>
+		</trackmarker>
+
+		<!-- ScaI -->
+		<trackmarker start="760" end="880" markerstyle='stroke:#000;fill:#0f0;' arrowendlength="10" arrowendwidth="5" wadjust="10" vadjust="-5">
+			<markerlabel text="ScaI" vadjust="40" valign="outer" class="lglabel green" showline="1" linevadjust="-15" lineclass="labelline"></markerlabel>
+			<markerlabel type="path" text="760-880" class="smlabel black" vadjust="4"></markerlabel>
+		</trackmarker>
+
+		<!-- Block markers -->
+		<trackmarker start="420" end="430" markerstyle='stroke:#000;fill:#666' wadjust="20" vadjust="-10">
+			<markerlabel text="A35" vadjust="-15" valign="inner" labelclass="mdlabel gray"></markerlabel>
+		</trackmarker>
+		<trackmarker start="355" end="365" markerstyle='stroke:#000;fill:#666' wadjust="20" vadjust="-10">
+			<markerlabel text="A36" vadjust="-15" valign="inner" labelclass="mdlabel gray"></markerlabel>
+		</trackmarker>
+		<trackmarker start="905" end="915" markerstyle='stroke:#000;fill:#666' wadjust="20" vadjust="-10">
+			<markerlabel text="A22" vadjust="-15" valign="inner" labelclass="mdlabel gray"></markerlabel>
+		</trackmarker>
+		<trackmarker start="170" end="180" markerstyle='stroke:#000;fill:#666' wadjust="20" vadjust="-10">
+			<markerlabel text="A14" vadjust="-15" valign="inner" labelclass="mdlabel gray"></markerlabel>
+		</trackmarker>
+
+		<!--
+		<trackmarker start="80" end="100" wadjust="0" vadjust="30">
+			<svgelement type="a" xlink:href="http://angularplasmid.vixis.com">
+				<defs>
+				<style type="text/css">
+				<![CDATA[
+				  path,circle {
+					stroke:#000000;
+					stroke-width: 2;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+					fill: none
+				  }]]>
+				</style>
+			  </defs>
+			   <path d="m 31.5 15.5 L 40 23 L 31.5 30.3333" />
+			  <path d="m 10 50 L 10 23 L 39 23" />
+			</svgelement>
+		</trackmarker>
+	-->
+	</plasmidtrack>
+</plasmid>
